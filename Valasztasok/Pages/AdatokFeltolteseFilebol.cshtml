@@ -5,5 +5,6 @@
 <h1>Adatok feltöltése filebol</h1>
 <form method="post" enctype="multipart/form-data">
     <label asp-for="UploadFile"></label>
-
+    <input type="file" asp-for="UploadFile" />
+    <input type="submit" value="Submit" />
 </form>

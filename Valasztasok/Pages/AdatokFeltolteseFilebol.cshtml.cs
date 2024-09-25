@@ -38,10 +38,17 @@ namespace Valasztasok.Pages
                 var items = line.Split(" ");
                 Jelolt ujJelolt = new Jelolt();
                 Part ujPart = new Part();
-                ujJelolt.
+                ujJelolt.Id = int.Parse(items[0]);
+                ujJelolt.SzavazatokSzama = int.Parse(items[1]);
+                ujJelolt.Nev = items[2] + " " + items[3];
+                ujJelolt.Part = ujPart;
+                ujJelolt.Kerulet = items[4];
+                _context.Add(ujJelolt);
+                _context.Add(ujPart);
             }
 
             sr.Close();
+            _context.SaveChanges();
             return Page();
         }
     }
