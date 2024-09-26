@@ -10,8 +10,8 @@ using Valasztasok.Model;
 namespace Valasztasok.Migrations
 {
     [DbContext(typeof(ValasztasokDbContext))]
-    [Migration("20240925065724_sqlite.local_migration_547")]
-    partial class sqlitelocal_migration_547
+    [Migration("20240926070908_sqlite.local_migration_679")]
+    partial class sqlitelocal_migration_679
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,18 +25,18 @@ namespace Valasztasok.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Kerulet")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Nev")
+                    b.Property<string>("KepviseloNev")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("KeruletID")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("PartRovidNev")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("SzavazatokSzama")
+                    b.Property<int>("SzavazatSzam")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

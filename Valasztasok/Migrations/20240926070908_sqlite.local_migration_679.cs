@@ -5,7 +5,7 @@
 namespace Valasztasok.Migrations
 {
     /// <inheritdoc />
-    public partial class sqlitelocal_migration_547 : Migration
+    public partial class sqlitelocal_migration_679 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -28,10 +28,10 @@ namespace Valasztasok.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Nev = table.Column<string>(type: "TEXT", nullable: false),
-                    PartRovidNev = table.Column<string>(type: "TEXT", nullable: false),
-                    Kerulet = table.Column<int>(type: "INTEGER", nullable: false),
-                    SzavazatokSzama = table.Column<int>(type: "INTEGER", nullable: false)
+                    KeruletID = table.Column<int>(type: "INTEGER", nullable: false),
+                    SzavazatSzam = table.Column<int>(type: "INTEGER", nullable: false),
+                    KepviseloNev = table.Column<string>(type: "TEXT", nullable: false),
+                    PartRovidNev = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

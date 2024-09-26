@@ -22,18 +22,18 @@ namespace Valasztasok.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Kerulet")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Nev")
+                    b.Property<string>("KepviseloNev")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("KeruletID")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("PartRovidNev")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("SzavazatokSzama")
+                    b.Property<int>("SzavazatSzam")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

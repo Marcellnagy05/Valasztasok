@@ -1,0 +1,48 @@
+﻿@page
+@model Valasztasok.Pages.ListMatchesModel
+
+@{
+    ViewData["Title"] = "ListMatches";
+}
+
+<h1>ListMatches</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Jelolt[0].KeruletID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jelolt[0].SzavazatSzam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jelolt[0].KepviseloNev)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Jelolt) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KeruletID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SzavazatSzam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KepviseloNev)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
